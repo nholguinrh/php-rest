@@ -1,0 +1,31 @@
+
+Oracle SQL Developer
+Copyright (c) 2005, 2023, Oracle and/or its affiliates. All rights reserved.
+
+
+Found /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.392.b08-4.el8.x86_64/jre to run this product, and the major version of this Java is 8.
+The mandatory minimum major version to run this product is 11.
+This product cannot run with this Java.
+
+The version of the default JDK (/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.392.b08-4.el8.x86_64/jre) is too low.
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Type the full pathname of a JDK installation (or Ctrl-C to quit), the path will be stored in /home/nholguin/.sqldeveloper/23.1.0/product.conf
+/opt/sqldeveloper/sqldeveloper/bin/../../ide/bin/launcher.sh: line 1632: read: read error: 0: Bad file descriptor
+Error:  Unable to get APP_JAVA_HOME input from stdin after 10 tries
