@@ -22,8 +22,6 @@ RUN pecl channel-update pecl.php.net
 RUN echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8-3.2.0
 
 COPY supervisord.conf /etc/supervisord.conf
-RUN touch /supervisord.log
-RUN chown 1000 /supervisord.log
 
 EXPOSE 80
 
