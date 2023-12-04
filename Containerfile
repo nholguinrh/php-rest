@@ -4,7 +4,7 @@ USER root
 RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 RUN dnf -y module enable php:8.1
 RUN dnf -y install php-pear php-devel unzip php php-fpm supervisor
-RUN mkdir /run/php-fpm && mkdir /opt/oracle && cd /opt/oracle && chmod 775 /run/php-fpm/
+RUN mkdir /run/php-fpm && mkdir /opt/oracle && cd /opt/oracle && chmod 775 /run/php-fpm && chmod 775 /run/httpd
 
 ADD lib/instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle/
 ADD lib/instantclient-sdk-linux.zseries64-12.2.0.1.0.zip /opt/oracle/
