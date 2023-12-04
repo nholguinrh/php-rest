@@ -3,9 +3,9 @@ FROM registry.access.redhat.com/ubi9-init
 RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 RUN dnf -y module enable php:8.1
 RUN dnf -y install php-pear php-devel unzip php php-fpm && dnf clean all
-RUN dnf clean all
-RUN mkdir /run/php-fpm && mkdir /opt/oracle && cd /opt/oracle && chmod 775 /run/php-fpm
 RUN systemctl enable httpd && systemctl enable php-fpm
+
+RUN mkdir /opt/oracle && cd /opt/oracle
 ADD lib/instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle/
 ADD lib/instantclient-sdk-linux.zseries64-12.2.0.1.0.zip /opt/oracle/
 RUN unzip /opt/oracle/instantclient-basic-linux.x64-12.2.0.1.0.zip -d /opt/oracle \
@@ -17,7 +17,6 @@ ENV ORACLE_HOME=/opt/oracle/instantclient_12_2 \
     LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2 \
     OCI8_CFLAGS=-I/opt/oracle/instantclient_12_2/sdk/include \
     OCI8_LIBS="-L/opt/oracle/instantclient_12_2 -lclntsh"
-
 RUN pecl channel-update pecl.php.net
 RUN echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8-3.2.0
 
