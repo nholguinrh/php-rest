@@ -1,11 +1,12 @@
-FROM registry.access.redhat.com/ubi9
+FROM registry.access.redhat.com/ubi9-init
 USER root
 
 RUN dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 RUN dnf -y module enable php:8.1
-RUN dnf -y install php-pear php-devel unzip php php-fpm supervisor
-RUN mkdir /run/php-fpm && mkdir /opt/oracle && cd /opt/oracle && chmod 775 /run/php-fpm && chmod 775 /run/httpd
-
+RUN dnf -y install php-pear php-devel unzip php php-fpm && dnf clean all
+RUN dnf clean all
+RUN mkdir /run/php-fpm && mkdir /opt/oracle && cd /opt/oracle && chmod 775 /run/php-fpm
+RUN systemctl enable httpd && systemctl enable php-fpm
 ADD lib/instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle/
 ADD lib/instantclient-sdk-linux.zseries64-12.2.0.1.0.zip /opt/oracle/
 RUN unzip /opt/oracle/instantclient-basic-linux.x64-12.2.0.1.0.zip -d /opt/oracle \
@@ -21,8 +22,6 @@ ENV ORACLE_HOME=/opt/oracle/instantclient_12_2 \
 RUN pecl channel-update pecl.php.net
 RUN echo 'instantclient,/opt/oracle/instantclient_12_2' | pecl install oci8-3.2.0
 
-COPY supervisord.conf /etc/supervisord.conf
-
 EXPOSE 80
 
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+CMD [ "/sbin/init" ]
